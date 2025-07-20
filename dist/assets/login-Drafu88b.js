@@ -1,1 +1,0 @@
-import{s as n,b as s}from"./firebase-config-YcMalVYY.js";document.getElementById("login-btn").addEventListener("click",async()=>{const e=document.getElementById("email").value,t=document.getElementById("password").value;try{await n(s,e,t),window.location.href="admin.html"}catch(a){alert("Error al iniciar sesión: "+a.message)}});

@@ -7,7 +7,7 @@ document.getElementById('login-btn').addEventListener('click', async () => {
 
   try {
     await signInWithEmailAndPassword(auth, email, password);
-    window.location.href = 'admin.html';
+    window.location.href = './admin.html';
   } catch (error) {
     alert('Error al iniciar sesión: ' + error.message);
   }
