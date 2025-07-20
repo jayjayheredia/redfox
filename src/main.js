@@ -1,11 +1,12 @@
 import { db } from './firebase-config.js';
-import { collection, addDoc, getDocs, query, where } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { collection, addDoc, getDocs, query, where } from 'firebase/firestore';
+
+import 'https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js';
 
 document.addEventListener('DOMContentLoaded', async function () {
   const calendarEl = document.getElementById('calendar');
   const turnosRef = collection(db, "turnos");
 
-  // Cargar todos los turnos (pendientes y aprobados)
   const getTurnos = async () => {
     const snapshot = await getDocs(turnosRef);
     return snapshot.docs.map(doc => {
@@ -13,37 +14,33 @@ document.addEventListener('DOMContentLoaded', async function () {
       return {
         title: `${data.title} (${data.status})`,
         start: data.start,
-        color: data.status === 'pendiente' ? '#facc15' : '#22c55e' // amarillo pendientes, verde aprobados
+        color: data.status === 'pendiente' ? '#facc15' : '#22c55e'
       };
     });
   };
 
-  const calendar = new FullCalendar.Calendar(calendarEl, {
+  const calendar = new window.FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
     locale: 'es',
     selectable: true,
     events: await getTurnos(),
 
     dateClick: async function(info) {
-      const hora = prompt(`Seleccioná el horario para el día ${info.dateStr} (Ejemplo: 14:30)`);
+      const hora = prompt(`Hora para ${info.dateStr}`);
       if (!hora) return;
 
-      const nombre = prompt(`Ingresa tu nombre para reservar ${info.dateStr} a las ${hora}`);
+      const nombre = prompt(`Nombre`);
       if (!nombre) return;
 
-      const telefono = prompt(`Ingresa un telefono para confirmar el turno ${info.dateStr}`);
+      const telefono = prompt(`Teléfono`);
       if (!telefono) return;
 
-      const fechaHora = `${info.dateStr}T${hora}:00`; // formato ISO
+      const fechaHora = `${info.dateStr}T${hora}:00`;
 
-      // Verificar si ese turno ya está reservado (aprobado o pendiente)
       const check = query(turnosRef, where("start", "==", fechaHora));
       const res = await getDocs(check);
 
-      if (!res.empty) {
-        alert("Este turno ya está reservado. Elegí otro horario.");
-        return;
-      }
+      if (!res.empty) return alert("Turno ocupado");
 
       await addDoc(turnosRef, {
         title: nombre,
@@ -52,7 +49,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         status: "pendiente"
       });
 
-      alert("Turno solicitado correctamente.");
+      alert("Turno solicitado");
       calendar.addEvent({ title: `${nombre} (pendiente)`, start: fechaHora, color: '#facc15' });
     }
   });

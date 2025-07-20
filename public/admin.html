@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Turnos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-10 bg-gray-100 text-red-700">
+
+<div class="flex justify-between items-center mb-8">
+  <h2 class="text-3xl font-bold"><a href="../index.html">Red Fox Tattoo</a></h2>
+  <h3 class="text-3xl font-bold">Panel de Administración</h3>
+  <button id="logout-btn" class="bg-red-700 hover:bg-red-600 text-white px-4 py-2 rounded">Cerrar Sesión</button>
+</div>
+
+<h2 class="text-2xl font-bold mb-4">Pendientes</h2>
+<div id="turnos-pendientes" class="space-y-4 mb-10"></div>
+
+<h2 class="text-2xl font-bold mb-4">Aprobados</h2>
+<div id="turnos-aprobados" class="space-y-4"></div>
+
+<script type="module" src="/src/admin.js"></script>
+</body>
+</html>
