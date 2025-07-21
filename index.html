@@ -98,6 +98,14 @@
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
     <script type="module" src="src/firebase-config.js"></script>
     <script type="module" src="src/main.js"></script>
-    <script src="src/index.js"></script>
+    <script >
+                function scrollToSection(event, id) {
+            event.preventDefault(); // No cambia la URL
+            const section = document.getElementById(id);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
 </body>
 </html>
