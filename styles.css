@@ -1,5 +1,5 @@
 *{
-    background-color: #333;
+    background-color: #1b1616;
     margin: 0;
     font-family: "Open Sans";
 }
@@ -7,14 +7,6 @@
 .titulo{
     font-family: "Manufacturing Consent";
     font-size: 80px;
-}
-
-header{
-    height: 100px;
-}
-
-.espaciador{
-    padding-bottom: 100px;
 }
 
 .tatuajes{
