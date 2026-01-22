@@ -1,5 +1,6 @@
+import { collection, addDoc, getDocs, query, where } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+// No importes el db aquí si ya lo exportas desde firebase-config.js
 import { db } from './firebase-config.js';
-import { collection, addDoc, getDocs, query, where } from 'firebase/firestore';
 
 
 document.addEventListener('DOMContentLoaded', async function () {

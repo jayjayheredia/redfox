@@ -69,3 +69,10 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #dc2626;
 }
+
+@font-face {
+    font-family: 'Manufacturing Consent';
+    src: url('./fonts/manufacturing_consent.ttf') format('truetype'); /* El ./ es clave */
+    font-weight: normal;
+    font-style: normal;
+}
