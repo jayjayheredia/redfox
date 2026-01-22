@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/redfox/',
+  base: './redfox/',
   build: {
     rollupOptions: {
       input: {
