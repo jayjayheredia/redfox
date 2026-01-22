@@ -1,10 +1,16 @@
 import { db } from './firebase-config.js';
 import { collection, addDoc, getDocs, query, where } from 'firebase/firestore';
 
-import 'https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js';
 
 document.addEventListener('DOMContentLoaded', async function () {
   const calendarEl = document.getElementById('calendar');
+
+  // Verificación de seguridad
+  if (!calendarEl) {
+    console.error("No se encontró el elemento #calendar en el DOM");
+    return;
+  }
+
   const turnosRef = collection(db, "turnos");
 
   const getTurnos = async () => {
