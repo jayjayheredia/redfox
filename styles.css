@@ -1,14 +1,71 @@
-*{
-    background-color: #1b1616;
+/* Importar fuente personalizada si la tienes localmente, sino usamos una similar de Google */
+@font-face {
+    font-family: 'Manufacturing Consent';
+    src: url('fonts/manufacturing_consent.ttf'); /* Asegúrate de que la ruta sea correcta */
+}
+
+body {
+    background-color: #0d0d0d;
     margin: 0;
-    font-family: "Open Sans";
+    font-family: 'Open Sans', sans-serif;
+    color: #e0e0e0;
 }
 
-.titulo{
-    font-family: "Manufacturing Consent";
-    font-size: 80px;
+.titulo {
+    font-family: 'Manufacturing Consent', serif;
+    letter-spacing: 2px;
 }
 
-.tatuajes{
-    margin-top: 10px;
+/* Estilos para los links del menu */
+.nav-link {
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: #999;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #dc2626; /* Rojo */
+}
+
+/* Iconos de redes sociales */
+.social-icon {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s;
+    color: #444;
+}
+
+.social-icon:hover {
+    transform: scale(1.3) rotate(5deg);
+}
+
+/* Personalización del Calendario para que no rompa la estética dark */
+.fc {
+    background: transparent !important;
+    border: none !important;
+}
+
+.fc-toolbar-title {
+    color: #ffffff !important;
+    text-transform: uppercase;
+}
+
+.fc-daygrid-day:hover {
+    background: rgba(220, 38, 38, 0.1) !important;
+}
+
+/* Estilo del Scroll */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0d0d0d;
+}
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #dc2626;
 }
