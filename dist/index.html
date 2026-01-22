@@ -1,127 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tattoo</title>
+    <title>Red Fox Tattoo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/flowbite@2.3.0/dist/flowbite.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet" />   
-  <script type="module" crossorigin src="/redfox/assets/main-Dbx8kqSS.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">   
+  <script type="module" crossorigin src="/redfox/assets/main-1msWhB9M.js"></script>
   <link rel="modulepreload" crossorigin href="/redfox/assets/firebase-config-YcMalVYY.js">
-  <link rel="stylesheet" crossorigin href="/redfox/assets/main-RvjWf6RX.css">
+  <link rel="stylesheet" crossorigin href="/redfox/assets/main-DSBplWMw.css">
 </head>
-<body>
-    <header id="inicio" class="flex flex-col md:flex-row items-center justify-between text-red-700 p-6 w-full">
-        <nav class="p-4 flex space-x-4">
-            <a class="font-bold text-xl md:text-2xl" href="#tatuajes" onclick="scrollToSection(event, 'tatuajes')">Tatuajes</a>
-            <a class="font-bold text-xl md:text-2xl" href="#ubicacion" onclick="scrollToSection(event, 'ubicacion')">Ubicación</a>
-        </nav>
-        <h1 class="titulo text-center text-4xl md:text-7xl pt-6 md:mt-0 pb-6">Red Fox Tattoo</h1>
-        <nav class="p-4 flex space-x-4">
-            <a class="font-bold text-xl md:text-2xl" href="#turnos" onclick="scrollToSection(event, 'turnos')">Turnos</a>
-            <a class="font-bold text-xl md:text-2xl" href="#redes" onclick="scrollToSection(event, 'redes')">Redes</a>
-        </nav>
+<body class="bg-[#0f0f0f] text-gray-200">
+
+    <header id="inicio" class="sticky top-0 z-[100] backdrop-blur-md bg-black/60 border-b border-red-900/30 p-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+            <nav class="hidden md:flex space-x-8">
+                <a class="nav-link" href="#tatuajes" onclick="scrollToSection(event, 'tatuajes')">TATUAJES</a>
+                <a class="nav-link" href="#ubicacion" onclick="scrollToSection(event, 'ubicacion')">UBICACIÓN</a>
+            </nav>
+            
+            <h1 class="titulo text-red-600 text-5xl md:text-7xl py-2 drop-shadow-[0_2px_10px_rgba(220,38,38,0.3)]">
+                Red Fox Tattoo
+            </h1>
+
+            <nav class="flex space-x-6 md:space-x-8 mt-4 md:mt-0">
+                <a class="nav-link md:hidden" href="#tatuajes" onclick="scrollToSection(event, 'tatuajes')">TATUAJES</a>
+                <a class="nav-link" href="#turnos" onclick="scrollToSection(event, 'turnos')">TURNOS</a>
+                <a class="nav-link" href="#redes" onclick="scrollToSection(event, 'redes')">REDES</a>
+            </nav>
+        </div>
     </header>
 
-    <a class="fixed z-50 ml-4 md:ml-40 mt-40 md:mt-80 border rounded-lg p-2 
-    border-red-700 hover:border-red-600 hover:text-red-600 
-    text-4xl text-red-700 bg-transparent shadow-lg backdrop-blur"
-    href="#"
-    onclick="scrollToSection(event, 'inicio')">
-    <i class="fa-solid fa-house"></i>
+    <a class="fixed bottom-8 right-8 z-50 flex items-center justify-center w-14 h-14 rounded-full border border-red-600 text-red-600 bg-black/50 backdrop-blur-lg hover:bg-red-600 hover:text-white transition-all duration-300 shadow-2xl"
+       href="#" onclick="scrollToSection(event, 'inicio')">
+        <i class="fa-solid fa-house text-xl"></i>
     </a>
 
+    <main class="max-w-6xl mx-auto px-4">
 
+        <section id="tatuajes" class="py-20">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bold text-white mb-2 uppercase tracking-widest">Galería</h2>
+                <div class="h-1 w-20 bg-red-600 mx-auto"></div>
+                <p class="text-gray-400 mt-4 italic">Arte grabado en la piel</p>
+            </div>
 
-    <main>
+            <div id="controls-carousel" class="relative w-full max-w-4xl mx-auto shadow-[0_0_50px_rgba(0,0,0,1)] rounded-2xl overflow-hidden border border-white/5" data-carousel="static">
+                <div class="relative h-[400px] md:h-[550px] overflow-hidden">
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="/redfox/assets/2-BMf61EaP.jpg" class="absolute block w-full h-full object-cover" alt="Tattoo 1">
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="/redfox/assets/3-DKxultny.jpg" class="absolute block w-full h-full object-cover" alt="Tattoo 2">
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="/redfox/assets/5-Dx6jPzu6.jpg" class="absolute block w-full h-full object-cover" alt="Tattoo 3">
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="/redfox/assets/6-Bf9cdUJp.jpg" class="absolute block w-full h-full object-cover" alt="Tattoo 4">
+                    </div>
+                </div>
+                <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 group focus:outline-none" data-carousel-prev>
+                    <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-black/40 group-hover:bg-red-600/50 transition-all">
+                        <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/></svg>
+                    </span>
+                </button>
+                <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 group focus:outline-none" data-carousel-next>
+                    <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-black/40 group-hover:bg-red-600/50 transition-all">
+                        <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
+                    </span>
+                </button>
+            </div>
+        </section>
 
-    <section id="tatuajes" class="text-red-700 text-center mt-20">
-        <h2 class="text-4xl font-bold p-4">Tatuajes</h2>
-        <p class="text-xl font-bold p-4">Algunos de los trabajos realizados</p>
-
-        <div id="controls-carousel" class="relative w-[90%] max-w-4xl mx-auto" data-carousel="static">
-            <div class="relative aspect-[4/3] sm:aspect-[16/9] overflow-hidden rounded-lg flex items-center justify-center">
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/redfox/assets/2-BMf61EaP.jpg" class="w-full h-full object-contain p-4 rounded-lg" alt="Lugar">
-                </div>
-                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                    <img src="/redfox/assets/3-DKxultny.jpg" class="w-full h-full object-contain p-4 rounded-lg" alt="Lugar 2">
-                </div>
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/redfox/assets/5-Dx6jPzu6.jpg" class="w-full h-full object-contain p-4 rounded-lg" alt="Habitación 1">
-                </div>
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/redfox/assets/6-Bf9cdUJp.jpg" class="w-full h-full object-contain p-4 rounded-lg" alt="Habitación 2">
-                </div>
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/redfox/assets/7-CYqLBJ-O.jpg" class="w-full h-full object-contain p-4 rounded-lg" alt="Asado">
+        <section id="ubicacion" class="py-20 bg-[#141414] rounded-3xl border border-white/5 my-10 shadow-inner">
+            <h2 class="text-4xl font-bold text-center text-white mb-8">Ubicación</h2>
+            <div class="flex justify-center px-4">
+                <div class="w-full max-w-4xl p-2 bg-white/5 rounded-[2rem] border border-red-900/20 shadow-2xl">
+                    <iframe class="rounded-[1.8rem] w-full h-[400px] grayscale invert opacity-80 hover:grayscale-0 hover:invert-0 transition-all duration-700" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.0668398130447!2d-62.26885702333395!3d-38.716274386156805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95edbcadbd53226f%3A0x691bcef7e56ca053!2sSarmiento%2072%2C%20B8000HQB%20Bah%C3%ADa%20Blanca%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1751933203699!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
-            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-transparent group-hover:bg-gray-800 group-focus:ring-4 group-focus:ring-red-700">
-                    <svg class="w-4 h-4 text-red-700 bg-transparent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/></svg>
-                </span>
-            </button>
-            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-transparent group-hover:bg-gray-800 group-focus:ring-4 group-focus:ring-red-700">
-                    <svg class="w-4 h-4 text-red-700 bg-transparent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
-                </span>
-            </button>
-        </div>
-    </section>
+        </section>
 
-    <section id="ubicacion" class="text-red-700 text-center mt-10">
-        <h2 class="text-4xl font-bold p-4">Dónde Estamos?</h2>
-        <p class="text-xl font-bold p-4">Nos encontramos en pleno centro de la ciudad</p>
-        <div class="flex justify-center pt-7">
-            <iframe class="rounded-3xl w-[70%] max-w-4xl h-[400px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.0668398130447!2d-62.26885702333395!3d-38.716274386156805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95edbcadbd53226f%3A0x691bcef7e56ca053!2sSarmiento%2072%2C%20B8000HQB%20Bah%C3%ADa%20Blanca%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1751933203699!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </section>
+        <section id="turnos" class="py-20">
+            <h2 class="text-4xl font-bold text-center text-red-600 mb-4 italic">RESERVÁ TU TURNO</h2>
+            <p class="text-center text-gray-400 mb-10">Seleccioná el día y horario que mejor te quede.</p>
+            <div id="calendar" class="p-4 bg-[#1a1a1a] rounded-3xl shadow-2xl border border-white/10 text-gray-300"></div>
+        </section>
 
-    <section id="turnos" class="text-red-700 text-center mt-10">
-        <h2 class="text-4xl font-bold p-4">Turnos</h2>
-        <p class="text-xl p-4">En el siguiente calendario verás los días y horarios disponibles para solicitar turnos</p>
-        <div id="calendar" 
-            class="p-4 sm:px-20 md:px-40 lg:px-80 py-10 bg-tra rounded-3xl shadow-xl">
-        </div>
-
-    </section>
-
-    <section id="redes" class="text-red-700 text-center mt-10">
-        <h2 class="text-4xl font-bold p-4">Nuestras Redes</h2>
-        <p class="text-xl p-4">En nuestras redes podés tener novedades más recientes y realizar tus consultas</p>
-<div class="text-4xl m-10 space-x-6">
-    <a class="hover:scale-110 transition-transform hover:text-green-600" href="https://web.whatsapp.com/">
-        <i class="fa-brands fa-square-whatsapp"></i>
-    </a>
-    <a class="hover:scale-110 transition-transform hover:text-blue-600" href="https://www.facebook.com/">
-        <i class="fa-brands fa-square-facebook"></i>
-    </a>
-    <a class="hover:scale-110 transition-transform hover:text-pink-600" href="https://www.instagram.com/">
-        <i class="fa-brands fa-square-instagram"></i>
-    </a>
-</div>
-
-    </section>
+        <section id="redes" class="py-20 text-center">
+            <h2 class="text-4xl font-bold text-white mb-10 uppercase tracking-tighter">Contacto Directo</h2>
+            <div class="flex justify-center gap-10 text-5xl">
+                <a class="social-icon hover:text-green-500" href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a class="social-icon hover:text-blue-500" href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a class="social-icon hover:text-pink-500" href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </section>
 
     </main>
 
-    <footer class="text-red-700 text-center text-l font-bold pt-10">
-        <p class="mb-6"><a href="./public/login.html">&copy;</a> 2025 Red Fox Tattoos. Todos los derechos reservados.</p>
+    <footer class="py-12 border-t border-white/5 text-center">
+        <p class="text-gray-500 text-sm">
+            <a href="./public/login.html" class="hover:text-red-600 transition-colors">©</a> 2025 Red Fox Tattoos. Arte con Identidad.
+        </p>
     </footer>
 
     <script src="https://kit.fontawesome.com/5cbb027761.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
-    <script >
-                function scrollToSection(event, id) {
-            event.preventDefault(); // No cambia la URL
+    <script>
+        function scrollToSection(event, id) {
+            event.preventDefault();
             const section = document.getElementById(id);
             if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
+                const headerOffset = 100;
+                const elementPosition = section.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
             }
         }
     </script>
