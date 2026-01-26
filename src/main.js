@@ -1,5 +1,11 @@
 import { db } from './firebase-config.js';
-import { collection, addDoc, getDocs, query, where } from 'firebase/firestore';
+import {
+  collection,
+  addDoc,
+  getDocs,
+  query,
+  where
+} from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js";
 
 import 'https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js';
 
