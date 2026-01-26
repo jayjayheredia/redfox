@@ -4,12 +4,12 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth
 
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_API_KEY,
-  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_APP_ID,
+  apiKey: "AIzaSyDu5IjABSjp7U8_0OvllhM0GcMnXUzwsJQ",
+  authDomain: "turno-fdd1b.firebaseapp.com",
+  projectId: "turno-fdd1b",
+  storageBucket: "turno-fdd1b.firebasestorage.app",
+  messagingSenderId: "253806761280",
+  appId: "1:253806761280:web:45af732a9418f0c46b96a5",
 };
 
 const app = initializeApp(firebaseConfig);
